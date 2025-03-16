@@ -1,0 +1,137 @@
+/* Overall page background: light creamy yellow */
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: #F9F4DE; /* Approximated from 첨부1 */
+  font-family: sans-serif;
+}
+
+/* Title styling */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Year selection area */
+.year-selection {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Container for all subject tables */
+#omr-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Subject table styling with purple borders and text */
+.subject-table {
+  border-collapse: collapse;
+  border: 2px solid #7C3E72;  /* Purple border */
+  margin-bottom: 20px;
+  background-color: #FFFDF7;  /* Slightly lighter than the body background */
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  min-width: 140px;
+}
+
+/* Table header: increased font size; for 민법, extra spacing is added in JS */
+.subject-table thead th {
+  color: #7C3E72;           /* Purple text */
+  font-weight: bold;
+  font-size: 1.4rem;        /* Increased font size */
+  padding: 8px 0;
+  border-bottom: 2px solid #7C3E72;
+  text-align: center;
+}
+
+/* Table cells: no borders except a dashed line every 5 rows */
+.subject-table td {
+  border: none;
+  text-align: center;
+  width: 30px;
+  height: 40px;
+  position: relative;
+}
+
+/* Dotted line after every 5th row */
+.subject-table tbody tr:nth-child(5n) td {
+  border-bottom: 1px dashed #7C3E72;
+}
+
+/* Question number styling */
+.question-number {
+  font-weight: bold;
+  color: #7C3E72;
+  font-size: 1rem; /* Matches the numeric text inside the circles */
+}
+
+/* Hide native radio buttons */
+input[type="radio"] {
+  display: none;
+}
+
+/* Circle label styling: small circle with plain numeric text */
+.circle-label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border: 1px solid #F29857; /* Orange border */
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;  /* Numeric text size matching question numbers */
+  color: #F29857;   /* Orange text color */
+  background-color: transparent;
+  text-align: center;
+  user-select: none;
+}
+
+/* When checked, fill circle with orange and show white text */
+input[type="radio"]:checked + .circle-label {
+  background-color: #F29857;
+  color: #FFF;
+  font-weight: bold;
+  border-color: #F29857;
+}
+
+/* Correct and wrong feedback styling */
+.correct-answer {
+  background-color: #b1e1b1 !important;
+  border-color: #4caf50 !important;
+  color: #000 !important;
+}
+
+.wrong-answer {
+  background-color: #f7a9a9 !important;
+  border-color: #f44336 !important;
+  color: #000 !important;
+}
+
+/* "채점하기" button styling */
+#check-button {
+  display: block;
+  margin: 30px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #F29857;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+#check-button:hover {
+  background-color: #e3894f;
+}
+
+/* Result display area */
+#result {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #7C3E72;
+}
