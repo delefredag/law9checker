@@ -37,7 +37,7 @@ h1 {
   min-width: 140px;
 }
 
-/* Table header: increased font size; for 민법, extra spacing is added in JS */
+/* Table header: increased font size; for civil, extra spacing is added in JS */
 .subject-table thead th {
   color: #7C3E72;           /* Purple text */
   font-weight: bold;
